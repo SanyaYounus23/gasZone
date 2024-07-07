@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>gasZone</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+<style>
+  .container2{
+	background-size: cover;
+	background-position: center;
+	background: linear-gradient(rgba(0,0,0,0.6) ,rgba(0,0,0,0.3)),url(images/bg.jpg);
+	width: 400px;
+	height:400px;
+	align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card2{
+	position: relative;
+	width: 370px;
+	height: 370px;
+	/*background-color: #eee;*/
+	perspective: 1000px;
+}
+
+.sides{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.left-side{ 
+	background-position-x: 0;
+   background-size: cover;
+   background: linear-gradient(rgba(0,0,0,0.5) ,rgba(0,0,0,0.7)),url(images/card-bg.jpg);
+   left: 0;
+    top: 0;
+    position: absolute;
+    
+    width: 50%;
+    height: 100%;
+    transform: rotateY(0deg);
+    transition: transform 1s;
+    transform-origin: left;
+}
+
+.right-side{
+		background-position-x: -180px;
+	background-size: cover;
+    background: linear-gradient(rgba(0,0,0,0.5) ,rgba(0,0,0,0.7)),url(images/card-bg.jpg); 
+	right: 0;
+	top: 0;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	transform: rotateY(0deg);
+    transition: transform 1s;
+    transform-origin: right;
+}
+
+.back-side{ 
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;	
+   background: linear-gradient(rgba(0,0,0,0.6) ,rgba(0,0,0,0.7)),url(images/person.jpg);
+   background-size: cover;
+   background-position: center; 	
+   z-index: -1;
+   left: 0;
+   top: 0;
+   position: absolute;   
+   width: 400px;
+   height: 400px;
+   transform: translateZ(-300px);
+   transition: z-index .4s step-end, transform 1s, box-shadow 1s;
+   box-shadow: 40px 40px 80px #000;
+}
+
+.card2:hover .left-side{
+ transform: rotateY(-360deg); 
+}
+
+.card2:hover .right-side{
+ transform: rotateY(360deg); 
+}
+
+.card2:hover .back-side{
+ box-shadow: 50px 50px 100px #000;
+ transform: translateZ(0); 
+ z-index: 1;
+}
+.name{
+	color: #fff;
+	font-size: 35px;
+	margin: 20px 5px;
+}
+
+.profession{
+  color: #fff;
+  font-size: 25px;
+  margin: 20px 5px;
+}
+
+.left-side .name,
+.left-side .profession{
+	text-align: right;
+}
+.biography{
+	color: #fff;
+	font-size: 22px;
+	background-color: rgba(0,0,0,0.4);
+	width: 90%;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+</style>
+
+</head>
+
+<body style="  background:rgb(240, 240, 149);">
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/icon.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main" class="main">
+
+
+    <section class="section" >
+      <div class="row" style="margin-top: 60px;">
+        <div class="col-lg-6">
+          <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">Add Customer</h5>
+
+              <!-- General Form Elements -->
+              <form
+                action="/add-customer"
+                method="post"
+           
+              >
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Name</label
+                  >
+                  <div class="col-sm-10">
+                    <input name="name" type="name" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Email</label
+                  >
+                  <div class="col-sm-10">
+                    <input name="email" type="email" class="form-control" />
+                  </div>
+                </div>
+                 
+         
+
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Contact</label
+                  >
+                  <div class="col-sm-10">
+                    <input name="contact" type="contact" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Location</label
+                  >
+                  <div class="col-sm-10">
+                    <input name="location" type="location" class="form-control" />
+                  </div>
+                </div>
+
+               
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Gender</label
+ >
+                   <div class="col-sm-10">
+                    <input name="gender" type="gender" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Cylinder Type</label
+ >
+                 <div class="col-sm-10">
+                 <input name="cylinder" type="cylinder" class="form-control" />
+                </div>
+                 </div>
+
+                 <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label"
+                    >Quantity</label
+ >
+                   <div class="col-sm-10">
+                     <input name="quantity" type="quantity" class="form-control" />
+                   </div>
+                       </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" >Add to Cart</button>
+                  </div>
+                </div>
+     
+          
+
+
+    </section>
+  </main>
+
+  <div class="container2"  style="height: 400px;width: 400px;margin-left: 1000px;margin-top: -400px;position: fixed;">
+    <div class="card2">
+      <div class="sides left-side">
+       <h1 class="name">gas</h1>
+       <h3 class="profession">Pakistan</h3>
+      </div>
+      <div class="sides right-side">
+        <h1 class="name">Zone </h1>
+       <h3 class="profession">1<sup>st</sup></h3>
+      </div>
+      <div class="back-side">
+        <p class="biography">
+         Pakistan's 1<sup>st</sup>officially Website for all gas service providers and all the Pakistanis.
+         Let's come together and spread this connection in all over the Pakistan to solve this refills cylinder problem
+         in Pakistan.Let's come together and refills our cylinder at home easily. 
+         
+        </p>
+      </div>
+    </div>
+  </div>
+    
+  </body>
+  </html>

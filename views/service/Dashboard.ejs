@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Dashboard</title>
+    <link rel="icon" href="UDassets/img/icon.png">
+    
+
+</head>
+<body>
+    <%-include('partial/SP header.ejs')%>
+    <%-include('partial/SP slide.ejs')%>
+
+    <main id="main" class="main">
+
+      <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/serviceproviderdashboard">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+  
+      <section class="section dashboard">
+        <div class="row">
+  
+          <!-- Left side columns -->
+          <div class="col-lg-8">
+            <div class="row">
+  
+              <!-- Sales Card -->
+              <div class="col-xxl-4 col-md-6">
+                <div class="card info-card sales-card">
+  
+                  <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+               
+                  </div>
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Orders <span>| Today</span></h5>
+  
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-cart"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>145</h6>
+                     
+  
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div><!-- End Sales Card -->
+  
+              <!-- Revenue Card -->
+              <div class="col-xxl-4 col-md-6">
+                <div class="card info-card revenue-card">
+  
+                  <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+               
+                  </div>
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Income</h5>
+  
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-currency-dollar"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>3,264</h6>
+                  
+  
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div><!-- End Revenue Card -->
+  
+              <!-- Customers Card -->
+              <div class="col-xxl-4 col-xl-12">
+  
+                <div class="card info-card customers-card">
+  
+                  <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+          
+                  </div>
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Comments</h5>
+  
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>1244</h6>
+           
+  
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+  
+              </div><!-- End Customers Card -->
+  
+              <!-- Reports -->
+              <div class="col-12">
+                <div class="card">
+  
+                  <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+         
+                  </div>
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Reports <span>/Today</span></h5>
+  
+                    <!-- Line Chart -->
+                    <div id="reportsChart"></div>
+  
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        new ApexCharts(document.querySelector("#reportsChart"), {
+                          series: [{
+                            name: 'Orders',
+                            data: [31, 40, 28, 51, 42, 82, 56],
+                          }, {
+                            name: 'Revenue',
+                            data: [11, 32, 45, 32, 34, 52, 41]
+                          }, {
+                            name: 'Comments',
+                            data: [15, 11, 32, 18, 9, 24, 11]
+                          }],
+                          chart: {
+                            height: 350,
+                            type: 'area',
+                            toolbar: {
+                              show: false
+                            },
+                          },
+                          markers: {
+                            size: 4
+                          },
+                          colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                          fill: {
+                            type: "gradient",
+                            gradient: {
+                              shadeIntensity: 1,
+                              opacityFrom: 0.3,
+                              opacityTo: 0.4,
+                              stops: [0, 90, 100]
+                            }
+                          },
+                          dataLabels: {
+                            enabled: false
+                          },
+                          stroke: {
+                            curve: 'smooth',
+                            width: 2
+                          },
+                          xaxis: {
+                            type: 'datetime',
+                            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                          },
+                          tooltip: {
+                            x: {
+                              format: 'dd/MM/yy HH:mm'
+                            },
+                          }
+                        }).render();
+                      });
+                    </script>
+                    <!-- End Line Chart -->
+  
+                  </div>
+  
+                </div>
+              </div><!-- End Reports -->
+  
+              <!-- Recent Sales -->
+              <div class="col-12">
+                <div class="card recent-sales overflow-auto">
+  
+                  <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+             
+                  </div>
+  
+                  <div class="card-body">
+                    <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+  
+                    <table class="table table-borderless datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Cylinder ID</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Area</th>
+                      
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>24</td>
+                        <td>Ali</td>
+                        <td>ali432@gmail.com</td>
+                        <td>Korangi#4</td>
+                      </tr>
+                      <tr>
+                        <td>24</td>
+                        <td>Saman Khan</td>
+                        <td>samankhan@gmail.com</td>
+                        <td>Korangi#2</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>Abdul Hadi</td>
+                        <td>alhadi@gmail.com</td>
+                        <td>Korangi#4</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>Bareera</td>
+                        <td>bareera432@gmail.com</td>
+                        <td>Korangi#1</td>
+                      </tr>
+                      </tbody>
+                    </table>
+  
+                  </div>
+  
+                </div>
+              </div><!-- End Recent Sales -->
+  
+     
+  
+            </div>
+          </div><!-- End Left side columns -->
+  
+          <!-- Right side columns -->
+          <div class="col-lg-4">
+  
+   
+  
+ 
+  
+  
+  
+        </div>
+      </section>
+  
+    </main><!-- End #main -->
+    <%-include('partial/SP footer.ejs')%>
+</body>
+</html>

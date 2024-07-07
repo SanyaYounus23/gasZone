@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('partial/header2.ejs')%>
+    <%-include('partial/slide2.ejs')%>
+
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Add Service Provider</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item">Service Provider</li>
+            <li class="breadcrumb-item active">Add Service Provider</li>
+          </ol>
+        </nav>
+      </div>
+
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Add Service Provider</h5>
+
+                <!-- General Form Elements -->
+                <form
+                  action="/add-provider"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Name</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="name" type="name" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Email</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="email" type="email" class="form-control" />
+                    </div>
+                  </div>
+                   
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Password</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="password" type="password" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Address</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="address" type="address" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >CNIC</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="cnic" type="cnic" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label"
+                      >Image Upload</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        name="image"
+                        class="form-control"
+                        type="file"
+                        id="formFile"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Store Name</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="storename" type="storename" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Store Location</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="storelocation" type="storelocation" class="form-control" />
+                    </div>
+                  </div>
+
+            
+
+                  <div class="row mb-3">
+                    <label for="inputText" class="col-sm-2 col-form-label"
+                      >Store Contact</label
+                    >
+                    <div class="col-sm-10">
+                      <input name="storecontact" type="storecontact" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                  </div>
+
+         
+</form>
+
+      </section>
+    </main>
+
+    <%-include('partial/footer2.ejs')%> 
+</body>
+</html>

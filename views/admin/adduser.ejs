@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('partial/header2.ejs')%>
+    <%-include('partial/slide2.ejs')%> 
+    
+    <main id="main" class="main">
+        <div class="pagetitle">
+          <h1>Add Customer</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+              <li class="breadcrumb-item">Team Members</li>
+              <li class="breadcrumb-item active">Add Members</li>
+            </ol>
+          </nav>
+        </div>
+  
+        <section class="section">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Add Members</h5>
+  
+                  <!-- General Form Elements -->
+                  <form
+                    action="/add-posts"
+                    method="post"
+                  >
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Name</label
+                      >
+                      <div class="col-sm-10">
+                        <input name="name" type="name" class="form-control" />
+                      </div>
+                    </div>
+  
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Email</label
+                      >
+                      <div class="col-sm-10">
+                        <input name="email" type="email" class="form-control" />
+                      </div>
+                    </div>
+                     
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Password</label
+                      >
+                      <div class="col-sm-10">
+                        <input name="passwword" type="password" class="form-control" />
+                      </div>
+                    </div>
+             
+  
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Contact</label
+                      >
+                      <div class="col-sm-10">
+                        <input name="contact" type="contact" class="form-control" />
+                      </div>
+                    </div>
+  
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Location</label
+                      >
+                      <div class="col-sm-10">
+                        <input name="location" type="location" class="form-control" />
+                      </div>
+                    </div>
+  
+                   
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Gender</label
+                      >
+                      
+
+                      <div class="col-sm-10">
+                        <input name="gender" type="gender" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label"
+                        >Role</label
+                      >
+                      
+
+                      <div class="col-sm-10">
+                        <input name="role" type="role" class="form-control" />
+                      </div>
+                    </div>
+  
+                    <div class="row mb-3">
+                      <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+
+                    </form>
+  
+  
+        </section>
+      </main>
+    <%-include('partial/footer2.ejs')%> 
+</body>
+</html>

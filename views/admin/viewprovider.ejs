@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('partial/header2.ejs')%>
+    <%-include('partial/slide2.ejs')%>
+  <section  class="section">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="row">
+          <div class="card-body">
+            <h5 class="card-title">Service Providers</h5>
+
+
+            <main id="main" class="main">
+  <!-- Existing code for the form -->
+  
+  <!-- New code for displaying data in a table -->
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Service Providers List</h5>
+
+            <table class="table">
+              <thead>
+                <tr>
+                    <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">CNIC</th>
+                  <th scope="col">Store Name</th>
+                  <th scope="col">Store Location</th>
+                  <th scope="col">Store Contact</th>
+                  <th colspan="2">Action</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% let count=1; cat.forEach(item => { %>
+                  <tr>
+                    <th scope="row"><%= count %></th>
+                    <td><%= item.title %></td>
+                    <td><%= item.email %></td>
+                    <td><%= item.address %></td>
+                    <td><%= item.cnic %></td>
+                    <td><%= item.storename %></td>
+                    <td><%= item.storelocation %></td>
+                    <td><%= item.storecontact %></td>
+               
+                </td>
+                <td>
+                </i>
+                  <i
+                    class="bi bi-pencil-square"
+                    style="color: green; cursor: pointer"
+                    onclick="showUpdateForm('<%= item._id %>', '<%= item.name %>')"
+                  ></i>
+                  <i
+                  class="bi bi-trash3"
+                  style="color: red; cursor: pointer"
+                  onclick="deleteCategory('<%= item._id %>')"
+                ></i>
+                </td>
+              </tr>
+                  </tr>
+                <% count++; }); %>
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+ 
+
+    
+    <%-include('partial/footer2.ejs')%> 
+</body>
+</html>

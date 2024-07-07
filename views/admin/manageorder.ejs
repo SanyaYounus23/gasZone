@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('partial/header2.ejs')%>
+    <%-include('partial/slide2.ejs')%>
+
+</section>
+  <main id="main" class="main">
+
+      <div class="pagetitle">
+        <h1>Data Tables</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+            <li class="breadcrumb-item">Tables</li>
+            <li class="breadcrumb-item active">Data</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+  
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-12">
+  
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Data of Orders</h5>
+               
+  
+                <!-- Table with stripped rows -->
+                <table class="table datatable">
+                  <thead>
+                    <tr>
+                      <th>S#No</th>
+                      <th>ID</th>
+                      <th>Customer Name</th>
+                      <th>Contact</th>
+                      <th>Email</th>
+                      <th>Location</th>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      
+                      <th>Service Provider</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>55663</td>
+                      <td>Ali</td>
+                      <td>0337864365</td>
+                      <td>ali@gmail.com</td>
+                      <td>Karachi,Pakistan</td>
+                      <td>Metallic</td>
+                      <td>5kg</td>
+                      <td>2333</td>
+                    
+                      <td>Abbas</td>
+                      <td>Process</td>
+                    </tr>
+
+                  </tbody>
+              </table>
+          </div>
+
+          <!-- ================= New Customers ================ -->
+        
+      </div>
+  </div>
+</div>
+  
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </section>
+  
+    </main><!-- End #main -->   
+
+  <%-include('partial/footer2.ejs')%>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>gasZone</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    /* CSS */
+  #location-input {
+    width: 78vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 3px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  
+  #location-input label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #location-input input[type="text"] {
+    width: 40%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  #location-input button[type="button"] {
+    width: 35%;
+    height: 40px;
+    padding: 10px;
+    font-size: 22px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight:400px;
+  }
+  
+  #location-input button[type="button"]:hover {
+    background-color: #3e8e41;
+  }
+
+  .container .welcome {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    display: block;
+}
+
+.container3 {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+    width: 100%;
+   
+}
+
+.welcome {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: #000;
+    position: relative;
+    animation: text 3s 1;
+
+}
+
+.muzile {
+    font-size: 30px;
+    color: #70a1ff;
+}
+
+@keyframes text {
+    0%{
+        color: #000;
+        margin-bottom: -40px;
+    }
+
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+    </style>
+</head>
+
+<body >
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/icon.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a> -->
+            <ul>
+        
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<div class="pic">
+  <img src="assets/img/map.png" style="width: 100%;background-color:black;opacity: 0.3;height: 510px;" >
+  <div class="container3">
+    <span class="welcome">Choose Your </span><br>
+    <span class="muzile" style="color: #000;font-weight: 600;">Location</span>
+        <!-- HTML -->
+        <div id="location-input" style="margin-top: 90px; margin-left: 150px;">
+          <form action="/getlocation" method="POST">
+            <label for="location">Enter your location:</label>
+            <input type="text" name="location" placeholder="e.g. Street, City, State" required>
+            <button type="submit" id="search-btn" style="color: black; font-weight: 500;">Search</button>
+          </form>
+        </div> 
+</div>
+  
+</div>
+ </body>
+</html>
